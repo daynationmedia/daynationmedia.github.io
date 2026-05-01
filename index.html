@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="monetag" content="dfb07bb202922957cadffe14c3e573dd">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Premium Access - Sports+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0A1128 0%, #0F1A3A 50%, #1A2A4A 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        /* Navy & Gold Theme */
+        .card-premium {
+            background: rgba(10, 17, 40, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+        }
+        
+        .text-gold {
+            color: #D4AF37;
+        }
+        
+        .border-gold {
+            border-color: #D4AF37;
+        }
+        
+        .bg-gold-light {
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .accent-gold {
+            background: linear-gradient(120deg, #D4AF37 0%, #F3E5AB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Iklan Container - Tidak Mengganggu */
+        .ad-container {
+            text-align: center;
+            margin: 16px auto;
+            position: relative;
+        }
+        .ad-label {
+            font-size: 9px;
+            color: rgba(212, 175, 55, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        
+        /* Countdown Animation */
+        @keyframes pulse-gold {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        .countdown {
+            animation: pulse-gold 1s infinite;
+        }
+        
+        /* Input Focus */
+        input:focus { 
+            border-color: #D4AF37 !important; 
+            outline: none; 
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+        
+        input {
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="max-w-6xl mx-auto px-4 py-6 md:py-10">
+        
+        <!-- ========== HEADLINE SECTION ========== -->
+        <div class="text-center mb-8">
+            <div class="inline-block bg-gold-light text-gold text-xs font-bold px-4 py-1 rounded-full mb-4 border border-gold/30">
+                ✨ EXCLUSIVE MEMBERSHIP • LIMITED OFFER
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <span class="text-white">PREMIUM</span> 
+                <span class="accent-gold">ACCESS</span>
+            </h1>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                Join the elite community. <strong class="text-gold">Register today for FREE</strong> and unlock 4K streaming.
+            </p>
+        </div>
+
+        <!-- ========== AD SPOT 1 - 300x250 (Middle) ========== -->
+        <!-- ⬇️⬇️⬇️ TEMPEL KODE BANNER 300x250 DI SINI ⬇️⬇️⬇️ -->
+        <div class="ad-container">
+            <div class="ad-label">Sponsored</div>
+            <div id="banner-300x250">
+                <!-- KODE BANNER 300x250 DARI ADSTERRA/MONETAG -->
+            </div>
+        </div>
+        <!-- ⬆️⬆️⬆️ TEMPEL KODE BANNER 300x250 DI SINI ⬆️⬆️⬆️ -->
+
+        <!-- ========== REGISTRATION CARD (FOKUS UTAMA) ========== -->
+        <div class="max-w-md mx-auto card-premium rounded-2xl p-6 md:p-8 my-6">
+            
+            <!-- Countdown Timer -->
+            <div class="text-center mb-6">
+                <p class="text-gray-400 text-sm mb-2">⏰ Offer expires in:</p>
+                <div class="flex justify-center gap-4 text-3xl font-bold">
+                    <div>
+                        <span id="hours" class="countdown text-gold">24</span>
+                        <span class="text-xs block text-gray-400">HOURS</span>
+                    </div>
+                    <div class="text-gold">:</div>
+                    <div>
+                        <span id="minutes" class="countdown text-gold">59</span>
+                        <span class="text-xs block text-gray-400">MINS</span>
+                    </div>
+                    <div class="text-gold">:</div>
+                    <div>
+                        <span id="seconds" class="countdown text-gold">59</span>
+                        <span class="text-xs block text-gray-400">SECS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Registration Form -->
+            <form onsubmit="return false;" class="space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <input type="text" placeholder="First Name" 
+                           class="w-full bg-white/10 border border-white/20 rounded-xl py-3 px-4 text-white focus:border-gold transition-all">
+                    <input type="text" placeholder="Last Name" 
+                           class="w-full bg-white/10 border border-white/20 rounded-xl py-3 px-4 text-white focus:border-gold transition-all">
+                </div>
+                <input type="email" placeholder="Email Address" 
+                       class="w-full bg-white/10 border border-white/20 rounded-xl py-3 px-4 text-white focus:border-gold transition-all">
+                <input type="password" placeholder="Create Password" 
+                       class="w-full bg-white/10 border border-white/20 rounded-xl py-3 px-4 text-white focus:border-gold transition-all">
+                
+                <!-- SMARTLINK BUTTON - GANTI DENGAN LINK ASLI ANDA -->
+                <a href="https://YOUR_SMARTLINK.adsterra.com" 
+                   class="btn-gold block w-full text-center font-bold py-4 rounded-xl text-[#0A1128] text-lg shadow-lg transition-all duration-300">
+                   ✨ CLAIM FREE ACCESS →
+                </a>
+                
+                <!-- Trust Badges -->
+                <div class="flex justify-center gap-4 text-xs text-gray-400 pt-2">
+                    <span>✓ No Credit Card</span>
+                    <span>✓ Instant Access</span>
+                    <span>✓ Cancel Anytime</span>
+                </div>
+            </form>
+        </div>
+
+        <!-- ========== AD SPOT 2 - 320x100 (Below Form, Mobile Friendly) ========== -->
+        <!-- ⬇️⬇️⬇️ TEMPEL KODE BANNER 320x100 DI SINI ⬇️⬇️⬇️ -->
+        <div class="ad-container">
+            <div class="ad-label">Sponsored</div>
+            <div id="banner-320x100">
+                <!-- KODE BANNER 320x100 DARI ADSTERRA/MONETAG -->
+            </div>
+        </div>
+        <!-- ⬆️⬆️⬆️ TEMPEL KODE BANNER 320x100 DI SINI ⬆️⬆️⬆️ -->
+
+    </div>
+
+    <!-- ========== FOOTER + SOCIAL BAR ========== -->
+    <div class="border-t border-gold/20 mt-4 py-6 text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <!-- ========== AD SPOT 3 - SOCIAL BAR (Widget Pojok Layar) ========== -->
+            <!-- ⬇️⬇️⬇️ TEMPEL KODE SOCIAL BAR DARI ADSTERRA/MONETAG DI SINI ⬇️⬇️⬇️ -->
+            <div class="ad-container">
+                <div class="ad-label">Sponsored</div>
+                <div id="social-bar-widget">
+                    <!-- KODE SOCIAL BAR -->
+                </div>
+            </div>
+            <!-- ⬆️⬆️⬆️ TEMPEL KODE SOCIAL BAR DI SINI ⬆️⬆️⬆️ -->
+            
+            <!-- Footer Links -->
+            <div class="flex justify-center space-x-6 mb-4 text-gray-500 text-xs">
+                <a href="#" class="hover:text-gold transition-colors">Terms & Conditions</a>
+                <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-gold transition-colors">Contact Us</a>
+            </div>
+            <p class="text-gray-600 text-xs">&copy; 2025 Sports+ Premium. All rights reserved.</p>
+            <p class="text-gray-700 text-[10px] mt-1">18+ | Ads by Adsterra</p>
+        </div>
+    </div>
+
+    <!-- ========== COUNTDOWN SCRIPT ========== -->
+    <script>
+        function startCountdown() {
+            const endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById('hours').innerText = '00';
+                    document.getElementById('minutes').innerText = '00';
+                    document.getElementById('seconds').innerText = '00';
+                    return;
+                }
+                
+                const hours = Math.floor(distance / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+        
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
+    
+</body>
+</html>
